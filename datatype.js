@@ -95,3 +95,6 @@ u_name = {}; // object
 //ex. if(null)}{}, js convert  it into false
 //ex. if(-1){} , js convert it into true
 //all --> true
+
+
+
