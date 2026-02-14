@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script src="variable.js"></script>
-    <script src="datatype.js"></script>
 
-<h1>Example or Excercise:</h1>
+<body>
+    <!-- <script src="variable.js"></script> -->
+    <!-- <script src="datatype.js"></script> -->
+    <!-- <script src="controllflow.js"></script> -->
+    <!-- <script src="operter.js"></script> -->
+    <!-- <script src="loops.js"></script> -->
+    <!-- <script src="functions.js"></script> -->
+    <!-- <h1>Example or Excercise:</h1>
 <div>
 <h3>Example 1 :</h3>
 <p>console.log(nm);</p>
@@ -97,9 +102,9 @@ Javascript Datatype:
 </div>
  
 <div>
-<p> why typeof NaN --> number </p> 
+<p> why typeof NaN  number </p> 
 <p>NaN is a failed number oprations that why that type is number</p>
-<p> ex. "hello" + 5 --> NaN</p>
+<p> ex. "hello" + 5  NaN</p>
 <p>Answer or Error: hello5</p>
 <p>Why : when one operand is a string, the other is converted to a string, so "hello" + "5" = "hello5"</p>
 </div>
@@ -114,7 +119,964 @@ Javascript Datatype:
 <p>Why : undefined means a variable has been declared but not assigned a value, while null is an assignment value that represents no value</p>
 </div>
  
- 
- 
+ <div>
+<h1>Example 1 :</h1>
+<p>let x = 2;</p>
+<p>switch(x){
+   case 2:
+   console.log("Two");
+   case 3:
+   console.log("Three");
+}</P>
+<div>
+
+
+
+<div>
+<h1>Example 2 :</h1>
+<p>Write a function getGrade(score) that:</p>
+<p> Takes A student's score as input (0 to 100)</P>
+<p>Returns the grade based on below logic:</P>
+<p>90-100 A+</P>
+<p>80-89 A</P>
+<p>70-79 B</P>
+<p>60-69 C</P>
+<p>33-59 D</P>
+<p>0-32 Fail</P>
+<p>Anything Else Invalid Marks</P>
+<div>
+
+
+
+<div>
+<h1>Example 3 :</h1>
+<p>Rock-Paper-Scissors:</p>
+<p>rock - scissors  rock</P>
+<p>paper - rock  paper</P>
+<p>scissors - paper  scissors</P>
+<div> -->
+<!-- 
+    <section id="datatypes">
+        <h2>Function Examples with parameters and arguments</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tbody>
+                <th>
+                    <h3>JavaScript Functions</h3>
+                </th>
+                <th>
+                    <pre>
+                             Function Examples
+                        </pre>
+                </th>
+                <th>Answer</th>
+                <tr>
+                    <td>Example 1</td>
+                    <td>
+                        <pre>
+What's the difference between function declaration and function expression in terms of hoisting?
+                            </pre>
+                    </td>
+                    <td>
+                        Function declarations are hoisted, meaning they can be called before they are defined in the
+                        code. Function expressions, on the other hand, are not hoisted. If you try to call a
+                        function expression before it is defined, it will result in a ReferenceError.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 2</td>
+                    <td>
+                        <pre>
+greet();
+function greet(){
+    console.log("Hello!");
+}
+Ans or Err and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: Hello!
+                        This will work because function declarations are hoisted, allowing the greet function to be
+                        called before its definition.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 3</td>
+                    <td>
+                        <pre>
+Convert normal function to Arrow Function
+function add(a, b){
+    return a + b;
+}
+Ans And How
+                            </pre>
+                    </td>
+                    <td>
+                        answer :
+                        const add = (a, b) => a + b;
+                        This converts the normal function to an arrow function by using the arrow syntax and
+                        removing the function keyword.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 4</td>
+                    <td>
+                        <pre>
+Identify what is parms and what is args
+function welcome(name){
+    console.log("Welcome " + name);
+}
+welcome("user");
+Ans and why
+                            </pre>
+                    </td>
+
+                    <td>
+                        In this example, "name" is the parameter (parms) of the function welcome, and "user" is the
+                        argument (args) passed to the function when it is called.
+                        In the function welcome(name), "name" is the parameter (parms) because it is defined in the
+                        function declaration. In the function call welcome("user"), "user" is the argument (args)
+                        because it is the actual value passed to the function.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 5</td>
+                    <td>
+                        <pre>
+how many parameters and args
+function temp (a, b, c){
+    console.log(a,b,c);
+}
+temp(1, 2)
+Ans, Err and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer:
+
+                        There are 3 parameters (a, b, c) defined in the function temp. However, only 2 arguments (1,
+                        2) are passed when calling the function. The third parameter "c" will be undefined since no
+                        argument is provided for it.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 6</td>
+                    <td>
+                        <pre>
+Predict the output
+function temp_user(name = "Guest"){
+    console.log("Hello " + name);
+}
+temp_user();
+Ans, Err and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: Hello Guest
+                        This will output "Hello Guest" because the function temp_user has a default parameter value
+                        of "Guest". When the function is called without any arguments, it uses the default value for
+                        the parameter "name".
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 7</td>
+                    <td>
+                        <pre>
+what is ... operator and why use it  in function
+function number(...numbers){
+    console.log(numbers);
+}
+number(1, 2, 3, 4, 5)
+Ans, Err and why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The ... operator is called the rest parameter syntax. It allows a function to accept
+                        an indefinite number of arguments as an array. In the function number(...numbers), all the
+                        arguments passed to the function are collected into the array "numbers". When calling
+                        number(1, 2, 3, 4, 5), it will output [1, 2, 3, 4, 5].
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 8</td>
+                    <td>
+                        <pre>
+Use rest Parameters to accept any number of scores and return the total
+function calculateTotal(...scores){
+    let total = 0;
+    for(let i=0; i<=scores.length; i++){
+        total += scores[i];
+    }
+    return total;
+}
+function calculateTotal(...scores){
+    let total = 0;
+    scores.forEach(function(val){
+        total = total + val;
+    });
+    return total;
+}
+calculateTotal(10, 20 ,30 ,40 ,50)
+let sumtotal = calculateTotal(10, 20 ,30 ,40 ,50)
+Ans, Err and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The first implementation of calculateTotal has an error in the for loop condition.
+                        It should be i < scores.length instead of i <=scores.length to avoid accessing an undefined
+                            index. The second implementation using forEach is correct and will return the total of the
+                            scores passed as arguments. Both implementations use rest parameters to accept any number of
+                            scores. </td>
+                </tr>
+                <tr>
+                    <td>Example 9</td>
+                    <td>
+                        <pre>
+Fix the function using early return
+function checkAge(age){
+    if(age < 18){
+        console.log("Too Young");
+        return;
+    } else {
+        console.log("Access Gr
+    }
+}
+Ans And how
+                            </pre>
+                    </td>
+                    <td>
+                        answer:
+                        function checkAge(age){
+                        if(age < 18){ console.log("Too Young"); return; } console.log("Access Granted"); } This
+                            implementation uses an early return to exit the function if the age is less than 18,
+                            preventing the need for an else block. </td>
+                </tr>
+                <tr>
+                    <td>Example 10</td>
+                    <td>
+                        <pre>
+What is the return value of above function
+function f(){ return;}
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The return value of the function f() is undefined. In JavaScript, if a function does
+                        not explicitly return a value, it returns undefined by default. Since there is no value
+                        specified after the return statement in function f(), it returns undefined.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 11</td>
+                    <td>
+                        <pre>
+What does is mean when we say "functions are first-class citizens"?
+Ans and Why 
+                            </pre>
+                    </td>
+                    <td>
+                        answer: In JavaScript, functions are considered first-class citizens because they can be
+                        treated like any other variable. This means that functions can be assigned to variables,
+                        passed as arguments to other functions, returned from functions, and stored in data
+                        structures. This allows for higher-order functions and functional programming techniques.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 12</td>
+                    <td>
+                        <pre>
+Can You assign a function to a variable and then all it?
+let a = function(){console.log("Hello");}
+a();
+                            </pre>
+                    </td>
+                    <td>
+                        answer: Yes, you can assign a function to a variable and then call it using that variable.
+                        In the example provided, the function that logs "Hello" is assigned to the variable "a".
+                        When you call a(), it executes the function and logs "Hello" to the console.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 13</td>
+                    <td>
+                        <pre>
+Pass A function into anthor funtion and excute it inside.
+Ans and Why, How
+function abcd(val){val()}
+abcd(function(){ console.log("Hello")})
+                            </pre>
+                    </td>
+                    <td>
+                        answer: In this example, a function is passed as an argument to another function called
+                        abcd. The function abcd takes a parameter val, which is expected to be a function. Inside
+                        abcd, val() is called, which executes the function that was passed in. When abcd is called
+                        with the anonymous function that logs "Hello", it results in "Hello" being printed to the
+                        console.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 14</td>
+                    <td>
+                        <pre>
+What is higer order function?
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: A higher-order function is a function that either takes one or more functions as
+                        arguments or returns a function as its result. Higher-order functions allow for more
+                        abstract and flexible code, enabling functional programming techniques such as map, filter,
+                        and reduce.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 16</td>
+                    <td>
+                        <pre>
+pure or impure function?
+let a = 5;
+function num(num){
+total += num;
+}
+num(3);
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The function num is an impure function because it modifies the external variable
+                        total. A pure function is one that does not have side effects and always produces the same
+                        output for the same input. Since num changes the value of total, it is considered impure.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 17</td>
+                    <td>
+                        <pre>
+
+convert example 16 function into pure function?
+Ans and how
+                            </pre>
+                    </td>
+                    <td>
+                        answer: To convert the function num into a pure function, you can modify it to return a new
+                        value instead of modifying the external variable total. Here is an example of a pure
+                        version of the function:
+
+                        function num(num, total){
+                        return total + num;
+                        }
+
+                        In this version, the function takes both num and total as parameters and returns the sum
+                        without modifying any external state.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 18</td>
+                    <td>
+                        <pre>
+What is Closure? When is it created?
+Ans and Example
+                            </pre>
+                    </td>
+                    <td>
+                        answer: A closure is a feature in JavaScript where an inner function has access to the outer
+                        (enclosing) function's variables and parameters, even after the outer function has returned.
+                        Closures are created when a function is defined inside another function, allowing the inner
+                        function to "close over" the variables of the outer function.
+
+                        Example:
+                        function outer() {
+                        let count = 0;
+                        return function inner() {
+                        count++;
+                        console.log(count);
+                        };
+                        }
+
+                        const counter = outer();
+                        counter(); // 1
+                        counter(); // 2
+
+                        In this example, the inner function retains access to the count variable from the outer
+                        function, demonstrating closure.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 19</td>
+                    <td>
+                        <pre>
+What's logged?
+function outer(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
+    };
+}
+const counter = outer();
+counter();
+counter();
+Ans, Err and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The output will be:
+                        1
+                        2
+                        Each time the counter function is called, it increments the count variable and logs its
+                        value.
+                        The count variable is preserved between calls due to closure, allowing it to maintain its
+                        state.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 20</td>
+                    <td>
+                        <pre>
+Convert below function into an IIFE:
+function init(){
+    console.log("Initialized");
+}
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The function can be converted into an IIFE (Immediately Invoked Function Expression)
+                        as follows:
+
+                        (function init(){
+                        console.log("Initialized");
+                        })();
+
+                        This immediately invokes the function after its definition, logging "Initialized" to the
+                        console.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 21</td>
+                    <td>
+                        <pre>
+What is the use of IIFE? Name one real-world use case.  
+let fun=(function(){
+    let score = 0; // this is private variable
+    return{
+        getScore: function(){
+            console.log(score);
+        },
+        setScore: function(val){
+            score = val;
+        }
+    }
+})()
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The use of an IIFE is to create a private scope for variables and functions,
+                        preventing
+                        them from polluting the global namespace. This is particularly useful for encapsulating code
+                        and avoiding naming conflicts.
+
+                        A real-world use case of an IIFE is in module pattern implementations, where you want to
+                        create a module with private variables and methods that cannot be accessed from outside the
+                        module. In the provided example, the score variable is private and can only be accessed or
+                        modified through the getScore and setScore methods.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 22</td>
+                    <td>
+                        <pre>
+What will be the output here and why?
+temp_var();
+var temp_var = function(){
+    console.log("Hello");
+}
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The output will be a ReferenceError. This is because temp_var is declared using var,
+                        but it is assigned a function expression. During the hoisting phase, only the declaration of
+                        temp_var is hoisted, not the assignment. Therefore, when temp_var() is called, it is still
+                        undefined, leading to a ReferenceError.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example 23</td>
+                    <td>
+                        <pre>
+What will be the output here and why?
+temp_var();
+function temp_var(){
+    console.log("Hello");
+}
+Ans and Why
+                            </pre>
+                    </td>
+                    <td>
+                        answer: The output will be "Hello". This is because function declarations are hoisted in
+                        their entirety, meaning both the declaration and the definition of temp_var are moved to the
+                        top of their scope during the hoisting phase. Therefore, when temp_var() is called, it
+                        successfully invokes the function and logs "Hello" to the console.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section> -->
+
+    <!-- <script src="array.js"></script>
+// Q1. push()
+// You are building a to-do app. Add a new task 'Buy milk' to the tasks array.
+let tasks = ['Wake up', 'Brush teeth'];
+tasks.push('Buy milk');
+
+
+
+
+// Q2. pop()
+// Remove the last notification from the notifications array.
+let notifications = ['Email', 'Message', 'Reminder'];
+notifications.pop();
+
+
+
+
+// Q3. shift()
+// A queue system removes the first customer. Remove the first customer.
+let customers = ['Customer1', 'Customer2', 'Customer3'];
+customers.shift();
+
+
+
+
+// Q4. unshift()
+// A new song is added to the beginning of the playlist.
+let playlist = ['Song B', 'Song C'];
+playlist.unshift('Song A');
+
+
+
+
+// Q5. splice()
+// In a classroom list, remove 'Alex' and add 'John' and 'Sara' in the same position.
+let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
+students.splice(1, 1, 'John', 'Sara');
+
+
+
+
+// Q6. splice()
+// From the menu, remove 2 items starting from index 1.
+let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
+menu.splice(1, 2);
+
+
+
+
+// Q7. slice()
+// Create a new array that contains only weekend days.
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+let weekend = days.slice(5, 7);
+
+
+
+
+// Q8. reverse()
+// Reverse the order of levels in a game.
+let levels = ['Easy', 'Medium', 'Hard'];
+levels.reverse();
+
+
+
+
+// Q9. sort()
+// Sort the scores in ascending order.
+let scores = [45, 12, 78, 34, 89];
+scores.sort((a, b) => a - b);
+
+
+
+// Q10. sort() with numbers
+// Sort the prices from lowest to highest.
+let prices = [199, 49, 999, 299, 149];
+prices.sort((a, b) => a - b);
+
+
+
+
+// Q11. slice() vs splice()
+// From the array, create a new array of the first 3 items WITHOUT changing the original array.
+let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
+let firstThree = products.slice(0, 3);
+
+
+
+
+// Q12. splice() complex
+// In the array below:
+// 1. Remove 'Blue'
+// 2. Add 'Purple' and 'Orange' at the same position
+let colors = ['Red', 'Green', 'Blue', 'Yellow'];
+ans:colors.splice(2, 1, 'Purple', 'Orange')
+colors.splice(2, 1, 'Purple', 'Orange');
+
+
+// Q13. reverse() + push()
+// Reverse the array and then add 'Final Step' at the end.
+let steps = ['Step 1', 'Step 2', 'Step 3'];
+steps.reverse();
+steps.push('Final Step');
+
+
+// Q14. sort() strings
+// Sort names alphabetically, ignoring case sensitivity.
+let names = ['alice', 'Bob', 'charlie', 'David'];
+ans: names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+
+
+
+// Q15. Combination Question
+// You are managing a movie watchlist:
+// 1. Add 'Inception'
+// 2. Remove the first movie
+// 3. Sort the list alphabetically
+let movies = ['Avatar', 'Titanic', 'Gladiator'];
+movies.push('Inception');  // add at end
+movies.shift();            // remove first movie
+movies.sort();             // sort alphabetically
+
+
+// Q16. splice() return value
+// What does the splice method return in this case?
+let nums1 = [1, 2, 3, 4];
+nums1.splice(1, 2);
+nums1.splice(1, 2);
+
+
+
+
+// Q17. slice() immutability check
+// After executing slice, does the original array change?
+let nums2 = [10, 20, 30, 40];
+let result = nums2.slice(1, 3);
+let result = nums2.slice(1, 3);
+
+
+// Q19. reverse() mutation
+// After reversing, what happens to the original array reference?
+let letters = ['a', 'b', 'c'];
+let reversedLetters = letters.reverse();
+let reversedLetters = letters.reverse();
+
+
+
+// Q21. splice() edge case
+// What happens if deleteCount is 0?
+let arr = ['x', 'y', 'z'];
+arr.splice(1, 0, 'new');
+arr.splice(1, 0, 'new');
+
+
+
+// Q23. slice() negative index
+// What elements are returned?
+let values = [100, 200, 300, 400, 500];
+let sliced = values.slice(-3, -1);
+let sliced = values.slice(-3, -1);
+
+
+
+
+// Q24. splice() vs slice() decision
+// Which method would you use if you want to:
+// a) Update the original array
+let arr = [1, 2, 3];
+arr.splice(1, 1);   // removes 2
+console.log(arr);   // [1, 3]  → original array changed
+
+// b) Keep the original array unchanged
+let arr = [1, 2, 3];
+let newArr = arr.slice(1, 3);
+console.log(arr);     // [1, 2, 3] → original unchanged
+console.log(newArr);  // [2, 3]
+
+
+
+
+// Q25. Chained methods (brain teaser)
+// What is the final value of arr?
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift());
+let arr2 = [1, 2, 3];
+arr2.push(arr2.shift()); -->
+
+<script src="object.js"></script>
+## Write Answers, Errors, How, Why for Every Questions
+
+## 🟢 VARIABLES & DATA TYPES (1–15)
+
+> Use the given variables while solving. Do NOT change values unless asked.
+
+```js
+let a = "a";
+let b = "10";
+let c = 10;
+let d;
+let e = null;
+```
+
+1. Compare `a == "a"` and `a === "a"`. Log both results.
+2. Compare `b == c` and `b === c`. Explain the output using code comments.
+3. Convert `b` so that `b === c` becomes `true`.
+4. Check whether `d` is `undefined` without using `typeof`.
+5. Write a condition that safely checks both `d` and `e`.
+6. Write code to prove that `null == undefined` but `null !== undefined`.
+7. Show type coercion using `c + b` and fix it.
+8. Check if `c` is `NaN` after doing `c / "a"`.
+9. Convert `b` to a number using **two different approaches**.
+10. Convert `c` to a string using **two different approaches**.
+11. Write code that turns any value into a boolean.
+12. Store a number in `const` and explain why reassignment fails (using code).
+13. Copy a primitive value and prove changes don’t affect the original.
+14. Write a comparison that returns `false` but looks like it should be `true`.
+15. Fix a buggy comparison caused by implicit type conversion.
+
+---
+
+## 🟢 OPERATORS (16–30)
+
+16. Check if a number is even **without `%` operator**.
+17. Find maximum of two numbers **without `if` or `Math.max()`**.
+18. Write a calculator using only arithmetic operators.
+19. Use logical operators to provide default values.
+20. Rewrite an `if-else` using ternary operator.
+21. Chain multiple ternary conditions.
+22. Use `&&` to conditionally execute a function.
+23. Demonstrate short-circuit behavior with code.
+24. Compare two values of different data types.
+25. Write code using nullish coalescing (`??`).
+26. Show difference between `||` and `??` using examples.
+27. Use spread operator to merge arrays.
+28. Use rest operator to accept variable arguments.
+29. Create a copy of an array and modify it safely.
+30. Demonstrate operator precedence using code.
+
+---
+
+## 🟡 CONTROL FLOW (31–45)
+
+31. Write a grading system using `if-else`.
+32. Convert the grading system into `switch`.
+33. Demonstrate switch fall-through behavior.
+34. Write nested `if` logic for login validation.
+35. Refactor nested `if` into clean conditions.
+36. Write code that executes only when two conditions are true.
+37. Handle multiple conditions using logical operators.
+38. Write a menu-driven program using `switch`.
+39. Show what happens when `break` is missing.
+40. Rewrite `switch` logic using `if-else`.
+41. Validate input range using conditions.
+42. Write code that exits early from a function.
+43. Implement a simple traffic light system.
+44. Convert real-life decision logic into code.
+45. Handle edge cases in conditional logic.
+
+---
+
+## 🟡 LOOPS (46–60)
+
+46. Print numbers from 1 to 100 using a loop.
+47. Print only even numbers using loop.
+48. Stop a loop when a condition is met.
+49. Skip numbers divisible by 3.
+50. Find sum of numbers using loop.
+51. Reverse a number using loop.
+52. Count digits in a number.
+53. Find factorial using loop.
+54. Generate Fibonacci sequence.
+55. Break out of nested loops.
+56. Use `continue` in a loop.
+57. Create a multiplication table.
+58. Detect infinite loop and fix it.
+59. Compare `for` vs `while` using code.
+60. Replace a loop with array methods.
+
+---
+
+## 🟡 FUNCTIONS (61–80)
+
+61. Write a function that returns sum of two numbers.
+62. Rewrite it using arrow function.
+63. Use default parameters.
+64. Write a function that returns another function.
+65. Pass a function as an argument.
+66. Write a callback-based example.
+67. Create a pure function.
+68. Demonstrate side effects in a function.
+69. Write a recursive function.
+70. Convert recursive logic to iterative.
+71. Write a function that accepts unlimited arguments.
+72. Implement a higher-order function.
+73. Use closure to preserve state.
+74. Create a function counter.
+75. Implement currying.
+76. Write a memoized function.
+77. Handle invalid input inside a function.
+78. Compare arrow vs normal function behavior.
+79. Write a function that runs only once.
+80. Refactor repeated logic into a function.
+
+---
+
+## 🔵 ARRAYS (81–101)
+
+81. Find sum of array elements.
+82. Find maximum element in array.
+83. Remove duplicates from array.
+84. Find second largest number.
+85. Filter positive numbers.
+86. Map array values to squares.
+87. Use `reduce()` to count elements.
+88. Chain `filter → map → reduce`.
+89. Find first matching element.
+90. Check if any value satisfies condition.
+91. Check if all values satisfy condition.
+92. Extract first and rest values using destructuring.
+93. Merge arrays using spread operator.
+94. Clone array deeply.
+95. Sort array without `.sort()`.
+96. Rotate array elements.
+97. Flatten nested array.
+98. Implement custom `map()`.
+99. Implement custom `filter()`.
+100. Implement custom `reduce()`.
+101. FINAL BOSS ⭐ Combine multiple array methods with constraints.
+
+
+
+# ✅ ANSWERS & HOW (Concise)
+
+> Each answer shows **what happens** and **why**. Keep code minimal.
+
+## Variables & Data Types (1–15)
+
+1. `==` checks value, `===` checks value + type → both true here.
+2. `b == c` true (coercion), `b === c` false (string vs number).
+3. `b = Number(b)` or `b = +b`.
+4. `d === undefined`.
+5. `d == null` safely checks both `null` & `undefined`.
+6. `null == undefined // true`, strict comparison is false.
+7. `c + b` becomes string concat → fix by converting `b` to number.
+8. `c / 'a'` → `NaN`; check via `Number.isNaN()`.
+9. `Number(b)`, `+b`.
+10. `String(c)`, `c.toString()`.
+11. `Boolean(value)` or `!!value`.
+12. `const` blocks reassignment, not mutation.
+13. Primitives copy by value → independent.
+14. Example: `0 == false` → true.
+15. Use strict equality to avoid coercion.
+
+## Operators (16–30)
+
+16. Use bitwise: `(n & 1) === 0`.
+17. Ternary: `a > b ? a : b`.
+18. Basic ops with `+ - * /`.
+19. Defaults via `||` or `??`.
+20. `condition ? a : b`.
+21. Nest ternaries carefully.
+22. `cond && fn()`.
+23. OR stops at first truthy.
+24. Coercion occurs with `==`.
+25. `x ?? y` only for null/undefined.
+26. `||` treats falsy; `??` doesn’t.
+27. `[...a, ...b]`.
+28. `function f(...args){}`.
+29. `const copy=[...arr]`.
+30. Parentheses change order.
+
+## Control Flow (31–45)
+
+31. `if/else` grading.
+32. `switch(score)`.
+33. Missing `break` falls through.
+34. Nested checks for auth.
+35. Combine conditions.
+36. Use `&&`.
+37. Logical operators.
+38. `switch(menu)`.
+39. Execution continues.
+40. Equivalent conditions.
+41. Range checks.
+42. Early `return`.
+43. `switch(color)`.
+44. Translate rules to code.
+45. Handle edges first.
+
+## Loops (46–60)
+
+46. `for` loop.
+47. `i+=2` or check even.
+48. `break`.
+49. `continue`.
+50. Accumulator.
+51. Mod/div loop.
+52. Count divisions.
+53. Multiply loop.
+54. Iterative fib.
+55. Label or flags.
+56. Skip iteration.
+57. Nested loop.
+58. Fix condition.
+59. Use cases differ.
+60. Prefer array methods.
+
+## Functions (61–80)
+
+61. `function sum(a,b){return a+b}`.
+62. `(a,b)=>a+b`.
+63. Defaults in params.
+64. Return function.
+65. Pass fn.
+66. Callback execution.
+67. No side effects.
+68. Mutates outer state.
+69. Base case.
+70. Loop version.
+71. Rest params.
+72. Takes/returns fn.
+73. Closure retains state.
+74. Increment counter.
+75. Partial application.
+76. Cache results.
+77. Guard clauses.
+78. `this` differs.
+79. IIFE/flag.
+80. DRY refactor.
+
+## Arrays (81–101)
+
+81. `reduce` sum.
+82. Track max.
+83. Filter/indexOf.
+84. Two-pass or one-pass.
+85. `filter(n>0)`.
+86. `map(n*n)`.
+87. `reduce((c)=>c+1)`.
+88. Chain methods.
+89. `find`.
+90. `some`.
+91. `every`.
+92. `[first,...rest]`.
+93. `[...a,...b]`.
+94. Recursive copy.
+95. Implement sort.
+96. Slice/concat.
+97. Recursion.
+98. Loop + callback.
+99. Conditional push.
+100. Accumulator logic.
+101. Combine with constraints.
 </body>
+
 </html>
