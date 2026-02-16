@@ -812,49 +812,145 @@ let arr2 = [1, 2, 3];
 arr2.push(arr2.shift()); -->
 
 <script src="object.js"></script>
-## Write Answers, Errors, How, Why for Every Questions
+
+<div>
+    <h1>Object Examples</h1>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tbody>
+            <th>
+                <h3>JavaScript Objects</h3>
+            </th>
+            <th>
+                <pre>
+                             Object Examples
+                        </pre>
+            </th>
+            <th>Answer</th>
+            <tr>
+                <td>Example 1</td>
+                <td>
+                    <pre>
+Write Answers, Errors, How, Why for Every Questions
 
 ## 🟢 VARIABLES & DATA TYPES (1–15)
 
 > Use the given variables while solving. Do NOT change values unless asked.
 
-```js
+js
 let a = "a";
 let b = "10";
 let c = 10;
 let d;
 let e = null;
-```
+
 
 1. Compare `a == "a"` and `a === "a"`. Log both results.
-2. Compare `b == c` and `b === c`. Explain the output using code comments.
-3. Convert `b` so that `b === c` becomes `true`.
-4. Check whether `d` is `undefined` without using `typeof`.
-5. Write a condition that safely checks both `d` and `e`.
-6. Write code to prove that `null == undefined` but `null !== undefined`.
-7. Show type coercion using `c + b` and fix it.
-8. Check if `c` is `NaN` after doing `c / "a"`.
-9. Convert `b` to a number using **two different approaches**.
-10. Convert `c` to a string using **two different approaches**.
-11. Write code that turns any value into a boolean.
-12. Store a number in `const` and explain why reassignment fails (using code).
-13. Copy a primitive value and prove changes don’t affect the original.
-14. Write a comparison that returns `false` but looks like it should be `true`.
-15. Fix a buggy comparison caused by implicit type conversion.
+console.log(a == "a");  // true, because values are equal
 
+2. Compare `b == c` and `b === c`. Explain the output using code comments.
+console.log(b == c);   // true, because of type coercion (string "10" is converted to number 10)
+console.log(b === c);  // false, because types are different (string vs number)
+
+
+3. Convert `b` so that `b === c` becomes `true`.
+b = Number(b);  // or b = +b; now b is a number and b === c will be true
+
+4. Check whether `d` is `undefined` without using `typeof`.
+console.log(d === undefined);  // true
+
+5. Write a condition that safely checks both `d` and `e`.
+console.log(d === undefined && e === null);  // true
+
+6. Write code to prove that `null == undefined` but `null !== undefined`.
+console.log(null == undefined);  // true
+console.log(null === undefined);  // false
+
+7. Show type coercion using `c + b` and fix it.
+console.log(c + b);  // 1010 (type coercion)
+b = Number(b);  // fix it by converting b to number
+console.log(c + b);  // 20
+
+8. Check if `c` is `NaN` after doing `c / "a"`.
+console.log(c / "a");  // NaN
+
+9. Convert `b` to a number using **two different approaches**.
+b = Number(b);  // approach 1
+b = +b;        // approach 2
+
+10. Convert `c` to a string using **two different approaches**.
+c = String(c);  // approach 1
+c = c.toString();  // approach 2
+
+11. Write code that turns any value into a boolean.
+console.log(Boolean(0));     // false
+console.log(Boolean(1));     // true
+console.log(Boolean(""));     // false
+console.log(Boolean("hello")); // true
+
+12. Store a number in `const` and explain why reassignment fails (using code).
+const num = 10;
+// num = 20;  // This would throw an error: Assignment to constant variable.
+
+13. Copy a primitive value and prove changes don’t affect the original.
+let original = 5;
+let copy = original;
+copy = 10;
+console.log(original);  // 5, unchanged
+console.log(copy);      // 10
+
+14. Write a comparison that returns `false` but looks like it should be `true`.
+console.log("0" == 0);  // true (type coercion)
+console.log("0" === 0); // false (different types)
+
+15. Fix a buggy comparison caused by implicit type conversion.
+let x = "5";
+if (x == 5) {  // this works due to type coercion
+    console.log("Equal");
+} else {
+    console.log("Not Equal");
+}
 ---
 
 ## 🟢 OPERATORS (16–30)
 
 16. Check if a number is even **without `%` operator**.
+let n = 4;
+console.log((n & 1) === 0);  // true for even numbers
+
 17. Find maximum of two numbers **without `if` or `Math.max()`**.
+let a = 5, b = 10;
+let max = a > b ? a : b;
+
 18. Write a calculator using only arithmetic operators.
+function calculate(a, b, operator) {
+    if (operator === '+') return a + b;
+    if (operator === '-') return a - b;
+    if (operator === '*') return a * b;
+    if (operator === '/') return a / b;
+}
+
 19. Use logical operators to provide default values.
+let value = null;
+let defaultValue = value || "default";
+
 20. Rewrite an `if-else` using ternary operator.
+let x = 10;
+let result = x > 5 ? "Greater than 5" : "Less than or equal to 5";
+
 21. Chain multiple ternary conditions.
+let grade = 85;
+let letterGrade = grade >= 90 ? "A" : grade >= 80 ? "B" : grade >= 70 ? "C" : "D";
+
 22. Use `&&` to conditionally execute a function.
+let condition = true;
+condition && console.log("Condition is true");
+
 23. Demonstrate short-circuit behavior with code.
+let a = 0;
+let b = 10;
+
 24. Compare two values of different data types.
+
 25. Write code using nullish coalescing (`??`).
 26. Show difference between `||` and `??` using examples.
 27. Use spread operator to merge arrays.
@@ -1077,6 +1173,380 @@ let e = null;
 99. Conditional push.
 100. Accumulator logic.
 101. Combine with constraints.
+
+
+## create Readmd.md file and write the answers of all questions
+## 🟢 BEGINNER LEVEL (1–20)
+
+### Q1. Variables
+
+What is the difference between `var`, `let`, and `const`?
+
+---
+
+### Q2. Data Types
+
+Name all primitive data types in JavaScript.
+
+---
+
+### Q3. Type Checking
+
+How do you check the type of a variable?
+
+---
+
+### Q4. Operators
+
+What is the difference between `==` and `===`?
+
+---
+
+### Q5. Arithmetic Operators
+
+What will be the output?
+
+```js
+let x = 10;
+console.log(x + 5 * 2);
+```
+
+---
+
+### Q6. String Concatenation
+
+What is the output?
+
+```js
+console.log('5' + 2);
+```
+
+---
+
+### Q7. Boolean Logic
+
+What is the result?
+
+```js
+console.log(true && false);
+```
+
+---
+
+### Q8. Functions
+
+What is a function and why is it used?
+
+---
+
+### Q9. Function Call
+
+What will this return?
+
+```js
+function add(a, b) {
+  return a + b;
+}
+add(2, 3);
+```
+
+---
+
+### Q10. Arrays
+
+How do you create an array in JavaScript?
+
+---
+
+### Q11. Array Access
+
+What is the output?
+
+```js
+const arr = [10, 20, 30];
+console.log(arr[1]);
+```
+
+---
+
+### Q12. Objects
+
+What is an object in JavaScript?
+
+---
+
+### Q13. Object Access
+
+What is the output?
+
+```js
+const user = { name: 'A', age: 20 };
+console.log(user.age);
+```
+
+---
+
+### Q14. Control Flow
+
+What does an `if` statement do?
+
+---
+
+### Q15. Condition Check
+
+What is the output?
+
+```js
+let x = 5;
+if (x > 3) console.log('Yes');
+```
+
+---
+
+### Q16. Loops
+
+What is a loop and why is it used?
+
+---
+
+### Q17. for Loop
+
+What is the output?
+
+```js
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+```
+
+---
+
+### Q18. while Loop
+
+When should you use a `while` loop?
+
+---
+
+### Q19. Increment Operator
+
+What is the result?
+
+```js
+let a = 5;
+a++;
+console.log(a);
+```
+
+---
+
+### Q20. Comments
+
+How do you write single-line and multi-line comments?
+
+---
+
+## 🟡 INTERMEDIATE LEVEL (21–35)
+
+### Q21. Scope
+
+What is block scope?
+
+---
+
+### Q22. Hoisting
+
+What is hoisting in JavaScript?
+
+---
+
+### Q23. Undefined vs Null
+
+Explain the difference between `undefined` and `null`.
+
+---
+
+### Q24. Truthy & Falsy
+
+List all falsy values in JavaScript.
+
+---
+
+### Q25. Functions vs Arrow Functions
+
+What is the difference between normal functions and arrow functions?
+
+---
+
+### Q26. Parameters vs Arguments
+
+Explain with an example.
+
+---
+
+### Q27. Return Keyword
+
+What happens if a function does not return anything?
+
+---
+
+### Q28. Array Methods
+
+What is the difference between `push()` and `pop()`?
+
+---
+
+### Q29. Loop vs Array Methods
+
+When should you use loops instead of array methods?
+
+---
+
+### Q30. Object Iteration
+
+How do you loop through object properties?
+
+---
+
+### Q31. Break & Continue
+
+Explain `break` and `continue` with loops.
+
+---
+
+### Q32. Comparison Operators
+
+What is the result?
+
+```js
+console.log(0 == false);
+console.log(0 === false);
+```
+
+---
+
+### Q33. Ternary Operator
+
+Rewrite using ternary:
+
+```js
+if (age >= 18) {
+  status = 'adult';
+}
+```
+
+---
+
+### Q34. Array Destructuring
+
+What is array destructuring?
+
+---
+
+### Q35. Spread Operator
+
+What does the spread operator do with arrays?
+
+---
+
+## 🔵 ADVANCED LEVEL (36–50)
+
+### Q36. Closures
+
+What is a closure? Give a simple example.
+
+---
+
+### Q37. Execution Context
+
+What is the JavaScript execution context?
+
+---
+
+### Q38. Call Stack
+
+What is the call stack?
+
+---
+
+### Q39. Pass by Value vs Reference
+
+Explain with arrays or objects.
+
+---
+
+### Q40. Shallow vs Deep Copy
+
+What is the difference?
+
+---
+
+### Q41. Higher-Order Functions
+
+What is a higher-order function?
+
+---
+
+### Q42. Callback Functions
+
+What is a callback function?
+
+---
+
+### Q43. Immutability
+
+Why is immutability important in JavaScript?
+
+---
+
+### Q44. Event Loop (Conceptual)
+
+What is the event loop?
+
+---
+
+### Q45. Synchronous vs Asynchronous
+
+Explain the difference.
+
+---
+
+### Q46. forEach vs map
+
+What is the difference?
+
+---
+
+### Q47. == Interview Trap ⭐
+
+What is the output?
+
+```js
+console.log([] == []);
+```
+
+---
+
+### Q48. typeof Interview Trap ⭐
+
+What is the output?
+
+```js
+console.log(typeof null);
+```
+
+---
+
+### Q49. NaN Check
+
+How do you check if a value is `NaN`?
+
+---
+
+### Q50. FINAL INTERVIEW QUESTION ⭐⭐⭐
+
+Explain how JavaScript code runs from start to finish (high-level).
+
+---
 </body>
 
 </html>
